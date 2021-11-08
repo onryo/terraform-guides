@@ -22,14 +22,7 @@ import "strings"
 
 # Resources that should be restricted
 param restricted_resources default [
-  "aws_s3_bucket",
-  "aws_s3_bucket_object",
-  "aws_s3_bucket_notification",
-  "azurerm_storage_account",
-  "azurerm_storage_container",
-  "azurerm_storage_blob",
-  "google_storage_bucket",
-  "google_storage_bucket_object",
+  "tfe_workspace",
 ]
 
 # Allowed Public and Private Module Registry Modules
@@ -47,14 +40,7 @@ param restricted_resources default [
 #   The third segment should be the provider of the module.
 # Do not add module sub-directories prefaced with "//" after the above segments.
 param allowed_module_sources default [
-  "terraform-aws-modules/s3-bucket/aws",
-  "app.terraform.io/Cloud-Operations/s3-bucket/aws",
-  "localterraform.com/*/s3-bucket/aws",
-  "tfe.acme.com/*/s3-bucket/aws",
-  "app.terraform.io/Cloud-Operations/caf/azurerm",
-  "localterraform.com/*/caf/azurerm",
-  "app.terraform.io/Cloud-Operations/cloud-storage/google",
-  "localterraform.com/*/cloud-storage/google",
+  "app.terraform.io/hashicoop/github-jenkins-pipeline/*",
 ]
 
 # Initialize validated. We'll flip to false if we find a violation.
