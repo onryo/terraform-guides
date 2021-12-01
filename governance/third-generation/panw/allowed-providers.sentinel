@@ -15,7 +15,7 @@ import "tfconfig-functions" as config
 import "strings"
 
 # List of allowed providers
-allowed_list = ["panos", "local", "null", "random", "terraform", "tfe"]
+allowed_list = ["panos", "vault", "local", "null", "random", "terraform", "tfe"]
 
 # Get all providers
 allProviders = config.find_all_providers()
